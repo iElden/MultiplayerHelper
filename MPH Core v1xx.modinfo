@@ -130,6 +130,7 @@
             <File>configuration/Config.xml</File>
 			<File>configuration/Config_BBG.xml</File>
 			<File>configuration/Config_BBS.xml</File>
+			<File>configuration/Config_BSM.xml</File>
         </UpdateDatabase>		
         <UpdateText id="MPH_TEXTS">
             <File>lang/Text_EN.xml</File>
@@ -527,6 +528,7 @@
 	<File>configuration/Config.xml</File>
 	<File>configuration/Config_BBG.xml</File>
 	<File>configuration/Config_BBS.xml</File>
+	<File>configuration/Config_BSM.xml</File>
 	
 	<File>mode/sudden_death/Sudden_Death_Portrait.dds</File>
 	<File>mode/sudden_death/Sudden_Death_Background.dds</File>
