@@ -851,7 +851,7 @@
             <Text>None</Text>
         </Replace>
         <Replace Tag="MPH_PRESET_CWC_NAME" Language="en_US">
-            <Text>[COLOR_Civ6Red]Official CWC Game[ENDCOLOR]</Text>
+            <Text>Civilization World Cup</Text>
         </Replace>
         <Replace Tag="MPH_PRESET_CPLFFA_NAME" Language="en_US">
             <Text>CPL FFA</Text>
@@ -870,6 +870,12 @@
         </Replace>
         <Replace Tag="MPH_PRESET_CIVFRTEAMER_DESC" Language="en_US">
             <Text>CivFR typical settings for teamers</Text>
+        </Replace>
+        <Replace Tag="MPH_OFFICIAL_GAME_NAME" Language="en_US">
+            <Text>[COLOR_RED]Official tournament game[ENDCOLOR]</Text>
+        </Replace>
+        <Replace Tag="MPH_OFFICIAL_GAME_DESC" Language="en_US">
+            <Text>If the game is part of an official tournament game, other mods can load/unload extra features.</Text>
         </Replace>
 		
     </LocalizedText>

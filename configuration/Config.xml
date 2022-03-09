@@ -9,6 +9,7 @@
 		<!--  CPL Settings -->
 		<!-- <Row ParameterId="CPL_CWC" Name="CPL_CWC_NAME" Description="CPL_CWC_DESC" Domain="bool" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="CPL_CWC" GroupId="GameOptions" SupportsSinglePlayer="0" SupportsPlayByCloud="0" SupportsHotSeat="0" SortIndex="0" /> -->
 		<Row ParameterId="MPH_PRESET" Name="MPH_PRESET_NAME" Description="MPH_PRESET_DESC" Domain="MphPreset" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="MPH_PRESET" GroupId="GameOptions" SupportsSinglePlayer="0" SupportsPlayByCloud="0" SupportsHotSeat="0" SortIndex="0" />
+		<Row ParameterId="MPH_OFFICIAL_GAME" Name="MPH_OFFICIAL_GAME_NAME" Description="MPH_OFFICIAL_GAME_DESC" Domain="bool" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="MPH_OFFICIAL_GAME" GroupId="GameOptions" SupportsSinglePlayer="0" SupportsPlayByCloud="0" SupportsHotSeat="0" SortIndex="3" />
 		<Row ParameterId="CPL_FS" Name="CPL_FS_NAME" Description="CPL_FS_DESC" Domain="FSCountRange" DefaultValue="2" ConfigurationGroup="Game" ConfigurationId="CPL_FS" GroupId="AdvancedOptions" SortIndex="2991" Visible="0"  />
 		<Row ParameterId="CPL_CS" Name="CPL_CS_NAME" Description="CPL_CS_DESC" Domain="CSCountRange" DefaultValue="1" ConfigurationGroup="Game" ConfigurationId="CPL_CS" GroupId="AdvancedOptions" SortIndex="2992" Visible="0"  />
 		<Row ParameterId="CPL_RULES" Name="CPL_RULES_NAME" Description="CPL_RULES_DESC" Domain="bool" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="CPL_RULES" GroupId="AdvancedOptions" ChangeableAfterGameStart="1" SortIndex="2900" Visible="0"  />
@@ -176,6 +177,7 @@
 	</ParameterCriteria>
 
 	<ParameterDependencies>
+		<Row ParameterId="MPH_OFFICIAL_GAME" 					ConfigurationGroup="Game" ConfigurationId="MPH_PRESET" Operator="NotEquals" ConfigurationValue="0" />
 		<!--  Map Pool Is revealed only if Map Pool is Ticked -->
 		<Row ParameterId="BAN_POOL_1" 							ConfigurationGroup="Game" ConfigurationId="DRAFT_MAP" Operator="Equals" ConfigurationValue="1" />
 		<Row ParameterId="BAN_POOL_2" 							ConfigurationGroup="Game" ConfigurationId="DRAFT_MAP" Operator="Equals" ConfigurationValue="1" />
@@ -193,14 +195,14 @@
 		<Row ParameterId="BAN_POOL_14" 							ConfigurationGroup="Game" ConfigurationId="DRAFT_MAP" Operator="Equals" ConfigurationValue="1" />
 		<Row ParameterId="BAN_POOL_15" 							ConfigurationGroup="Game" ConfigurationId="DRAFT_MAP" Operator="Equals" ConfigurationValue="1" />		
 		<!--  Alliance Cannot be toogled without Gathering Storm -->
-		<Row ParameterId="Alliance_Military" 					ConfigurationGroup="Game" ConfigurationId="RULESET" Operator="Equals" ConfigurationValue="RULESET_EXPANSION_2" />	
-		<Row ParameterId="Alliance_Cultural" 					ConfigurationGroup="Game" ConfigurationId="RULESET" Operator="Equals" ConfigurationValue="RULESET_EXPANSION_2" />	
-		<Row ParameterId="Alliance_Religious" 					ConfigurationGroup="Game" ConfigurationId="RULESET" Operator="Equals" ConfigurationValue="RULESET_EXPANSION_2" />	
-		<Row ParameterId="Alliance_Research" 					ConfigurationGroup="Game" ConfigurationId="RULESET" Operator="Equals" ConfigurationValue="RULESET_EXPANSION_2" />	
-		<Row ParameterId="Alliance_Economic" 					ConfigurationGroup="Game" ConfigurationId="RULESET" Operator="Equals" ConfigurationValue="RULESET_EXPANSION_2" />	
+		<Row ParameterId="Alliance_Military" 					ConfigurationGroup="Game" ConfigurationId="RULESET" Operator="Equals" ConfigurationValue="RULESET_EXPANSION_2" />
+		<Row ParameterId="Alliance_Cultural" 					ConfigurationGroup="Game" ConfigurationId="RULESET" Operator="Equals" ConfigurationValue="RULESET_EXPANSION_2" />
+		<Row ParameterId="Alliance_Religious" 					ConfigurationGroup="Game" ConfigurationId="RULESET" Operator="Equals" ConfigurationValue="RULESET_EXPANSION_2" />
+		<Row ParameterId="Alliance_Research" 					ConfigurationGroup="Game" ConfigurationId="RULESET" Operator="Equals" ConfigurationValue="RULESET_EXPANSION_2" />
+		<Row ParameterId="Alliance_Economic" 					ConfigurationGroup="Game" ConfigurationId="RULESET" Operator="Equals" ConfigurationValue="RULESET_EXPANSION_2" />
 		<!--  Remove Turn Timer with Smart Timer -->
 		<Row ParameterId="TurnTimerType" 						ConfigurationGroup="Game" ConfigurationId="CPL_SMARTTIMER" Operator="Equals" ConfigurationValue="1" />
-</ParameterDependencies>
+	</ParameterDependencies>
 
 	<ConfigurationUpdates>
 <!--  Vote Draft Can Only Be Random -->
@@ -239,7 +241,8 @@
 		<Row ParameterId="BAN_POOL_14" Name="LOC_MAP_TILTED_AXIS_NAME" 
 		<Row ParameterId="BAN_POOL_15" Name="LOC_MAP_HIGHLANDS_NAME" 
 		-->
-		
+
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="1" TargetGroup="Game" TargetId="MPH_OFFICIAL_GAME" TargetValue="1" />
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="1" TargetGroup="Game" TargetId="BAN_POOL_1" TargetValue="0" Hash="0"/>
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="1" TargetGroup="Game" TargetId="BAN_POOL_2" TargetValue="0" Hash="0"/>
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="1" TargetGroup="Game" TargetId="BAN_POOL_3" TargetValue="0" Hash="0"/>
@@ -266,6 +269,7 @@
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="1" TargetGroup="Game" TargetId="NO_TRADING_CITIES" TargetValue="0" />
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="1" TargetGroup="Game" TargetId="ALLIANCE_MILITARY" TargetValue="1"/>
 		<!-- CPL FFA -->
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="2" TargetGroup="Game" TargetId="MPH_OFFICIAL_GAME" TargetValue="0" />
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="2" TargetGroup="Game" TargetId="NO_DUPLICATE_LEADERS" TargetValue="0" Hash="0" />
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="2" TargetGroup="Game" TargetId="NO_DUPLICATE_CIVILIZATIONS" TargetValue="0" Hash="0" />
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="2" TargetGroup="Game" TargetId="GAME_START_ERA" TargetValue="ERA_ANCIENT" Hash="1"/>
@@ -279,6 +283,7 @@
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="2" TargetGroup="Game" TargetId="NO_TRADING_CITIES" TargetValue="1" />
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="2" TargetGroup="Game" TargetId="ALLIANCE_MILITARY" TargetValue="0"/>
 		<!-- CivFR Squadron -->
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="MPH_OFFICIAL_GAME" TargetValue="1" />
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="NO_DUPLICATE_LEADERS" TargetValue="0" Hash="0" />
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="NO_DUPLICATE_CIVILIZATIONS" TargetValue="0" Hash="0" />
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="GAME_START_ERA" TargetValue="ERA_ANCIENT" Hash="1"/>
