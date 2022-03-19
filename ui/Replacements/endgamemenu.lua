@@ -179,6 +179,16 @@ Styles = {
 		SndStop = "Stop_Cinematic_Endgame_Domination",
 		Color = "COLOR_VICTORY_DEFAULT",
 	},
+    ["MPH_VICTORY_ECONOMY"] = {
+		RibbonIcon = "ICON_VICTORY_DIPLOMATIC",
+		Ribbon = "EndGame_Ribbon_Time",
+		RibbonTile = "EndGame_RibbonTile_Time",
+		Background = "EndGame_BG_Time",
+		Movie = "Time.bk2",
+		SndStart = "Play_Cinematic_Endgame_Time",
+		SndStop = "Stop_Cinematic_Endgame_Time",
+		Color = "COLOR_VICTORY_SCORE",
+	},
 };
 
 
