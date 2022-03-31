@@ -869,6 +869,37 @@ function Squadron_Natural_Wonders()
 	GameConfiguration.SetValue("EXCLUDE_NATURAL_WONDERS",default)
 end
 
+function CWC_Natural_Wonders()
+	local default = {}
+	default = {
+                "FEATURE_BARRINGER_CRATER",
+				"FEATURE_BIOLUMINESCENT_BAY",
+				"FEATURE_CERRO_DE_POTOSI",
+				"FEATURE_DALLOL",
+				"FEATURE_GRAND_MESA",
+				"FEATURE_KRAKATOA",
+				"FEATURE_LAKE_VICTORIA",
+				"FEATURE_LENCOIS_MARANHENSES",
+				"FEATURE_OUNIANGA",
+				"FEATURE_MOSI_OA_TUNYA",
+				"FEATURE_MOTLATSE_CANYON",
+				"FEATURE_KAILASH",
+				"FEATURE_NAMIB",
+				"FEATURE_OLD_FAITHFUL",
+				"FEATURE_SINAI",
+				"FEATURE_SALAR_DE_UYUNI",
+				"FEATURE_WULINGYUAN",
+				"FEATURE_SALAR_DE_UYUNI",
+				"FEATURE_SRI_PADA",
+				"FEATURE_GIBRALTAR",
+				"FEATURE_VREDEFORT_DOME",
+				"FEATURE_LYSEFJORDEN",
+				"FEATURE_GIANTS_CAUSEWAY",
+				"FEATURE_MATTERHORN"
+				}
+	GameConfiguration.SetValue("EXCLUDE_NATURAL_WONDERS",default)
+end
+
 function CheckPreset()
 	local currentPreset = GameConfiguration.GetValue("MPH_PRESET")
 	print("CheckPreset()",currentPreset,m_Preset,isInSession)
@@ -888,7 +919,7 @@ function CheckPreset()
 		-- CWC
 		if currentPreset == 1 then
 			print("Applied CWC Settings")
-			Default_Natural_Wonders()
+			CWC_Natural_Wonders()
 		end
 		-- FFA
 		if currentPreset == 2 then
@@ -898,7 +929,6 @@ function CheckPreset()
 		-- Squadron
 		if currentPreset == 3 then
 			print("Applied Squadron Settings")
-			Default_Natural_Wonders()
 			Squadron_Natural_Wonders()
 		end	
 		Network.BroadcastGameConfig();	
