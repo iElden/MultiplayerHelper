@@ -423,7 +423,7 @@ function Refresh()
 	local enabledMods = GameConfiguration.GetEnabledMods();
 	local bMods = false
 	for _, curMod in ipairs(enabledMods) do
-		if curMod.Id == "c88cba8b-8311-4d35-90c3-51a4a5d6654f" then
+		if curMod.Id == "c88cba8b-8311-4d35-90c3-51a4a5d66540" then
 			bMods = true
 		end													 	 
 	end

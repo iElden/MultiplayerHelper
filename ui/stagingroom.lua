@@ -1554,7 +1554,7 @@ function Refresh()
 		if curMod.Id == "3291a787-4a93-445c-998d-e22034ab15b3" or curMod.Id == "c6e5ad32-0600-4a98-a7cd-5854a1abcaaf" then
 			GameConfiguration.SetValue("MOD_BSM_ID",true)
 		end			
-		if curMod.Id == "c88cba8b-8311-4d35-90c3-51a4a5d6654f" then
+		if curMod.Id == "c88cba8b-8311-4d35-90c3-51a4a5d66540" then
 			GameConfiguration.SetValue("MOD_BBS_ID",true)
 		end		
 		if curMod.Id == "cb84074d-5007-4207-b662-c35a5f7be240" or curMod.Id == "cb84074d-5007-4207-b662-c35a5f7be230" then
@@ -7088,7 +7088,7 @@ function BuildAdditionalContent()
 			modTitleStr =  "[COLOR_LIGHTBLUE]".. modTitleStr .. "[ENDCOLOR]";
 			b_spec_game = true
 		end		
-		if curMod.Id == "c88cba8b-8311-4d35-90c3-51a4a5d6654f" then
+		if curMod.Id == "c88cba8b-8311-4d35-90c3-51a4a5d66540" then
 			modTitleStr =  "[COLOR_LIGHTBLUE]".. modTitleStr .. "[ENDCOLOR] (local: "..GetLocalModVersion(curMod.Id)..")";
 			b_bbs_game = true
 			s_bbs_id = curMod.Id
