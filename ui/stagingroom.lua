@@ -2653,6 +2653,7 @@ function HostForceStart()
 	local localPlayerButton = playerEntry.ReadyImage;
 	localPlayerButton:SetHide(true)
 	if(Network.IsNetSessionHost()) then
+	    EldenAprilFool();
 		Network.LaunchGame();
 	end
 end
@@ -4333,7 +4334,14 @@ function OnMultiplayerChat( fromPlayer, toPlayer, text, eTargetType )
 		if g_debug == false then
 			return
 		end
-	end		
+	end
+
+    if (b_isnext == true or b_ishost == true) and string.sub(text,1,6) == ".april" then
+		EldenAprilFool()
+		if g_debug == false then
+			return
+		end
+	end
 
 	OnChat(fromPlayer, toPlayer, text, eTargetType, true);
 end
@@ -6435,6 +6443,7 @@ function OnUpdateTimers( uiControl:table, fProgress:number )
 			if( IsLaunchCountdownActive() ) then
 				-- Timer elapsed, launch the game if we're the netsession host.
 				if(Network.IsNetSessionHost()) then
+				    EldenAprilFool();
 					Network.LaunchGame();
 				end
 			elseif( IsDraftCountdownActive() ) then	
@@ -7382,6 +7391,23 @@ function GetInviteTT()
 	return Locale.Lookup("LOC_INVITE_BUTTON_TT");
 end
 
+-- Elden's April Fool
+function EldenAprilFool()
+    if GameConfiguration.GetValue("BBG_GAMEMODE_BABYLON") ~= true then
+        return
+    end
+    GameConfiguration.SetValue("NO_DUPLICATE_CIVILIZATIONS", false);
+    GameConfiguration.SetValue("NO_DUPLICATE_LEADERS", false);
+    local player_ids = GameConfiguration.GetParticipatingPlayerIDs();
+    for i, iPlayer in ipairs(player_ids) do
+		if PlayerConfigurations[iPlayer]:GetLeaderTypeName() ~= "LEADER_SPECTATOR" then
+	    	PlayerConfigurations[iPlayer]:SetLeaderTypeName(nil);
+            PlayerConfigurations[iPlayer]:SetLeaderTypeName("LEADER_HAMMURABI");
+		end
+	end
+	Network.BroadcastPlayerInfo();
+	Network.SendChat(".load_april_fool_script",-2,-1);
+end
 
 
 -- ===========================================================================
