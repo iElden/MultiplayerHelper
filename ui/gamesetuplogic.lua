@@ -40,6 +40,7 @@ function GetControlStack(group)
 		--["BanPoolOptions"] = Controls.BanPoolParametersStack,
 		["TournamentOptions"] = Controls.TournamentParametersStack,
 		["TradingOptions"] = Controls.TradingParametersStack,
+		["CustomRuleOptions"] = Controls.CustomRuleParametersStack,
 		["AdvancedOptions"] = Controls.SecondaryParametersStack,
 	};
 
