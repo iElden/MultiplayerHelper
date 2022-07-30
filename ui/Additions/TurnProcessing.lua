@@ -96,6 +96,7 @@ function SmartTimer()
 	-- 2: Lege
 	-- 3: S1AL
 	-- 4: Sephis
+	-- 5: Phyphy
 	if GameConfiguration.GetValue("CPL_SMARTTIMER") == 1 then
 		return
 	end
