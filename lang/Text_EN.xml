@@ -859,6 +859,9 @@
         <Replace Tag="MPH_PRESET_CIVFRTEAMER_NAME" Language="en_US">
             <Text>Squadron CivFR</Text>
         </Replace>
+        <Replace Tag="MPH_PRESET_PHYPHY_NAME" Language="en_US">
+            <Text>1v1 Blitz</Text>
+        </Replace>
 		<Replace Tag="MPH_PRESET_NONE_DESC" Language="en_US">
             <Text>Default Settings</Text>
         </Replace>
@@ -870,6 +873,9 @@
         </Replace>
         <Replace Tag="MPH_PRESET_CIVFRTEAMER_DESC" Language="en_US">
             <Text>CivFR typical settings for teamers</Text>
+        </Replace>
+        <Replace Tag="MPH_PRESET_PHYPHY_DESC" Language="en_US">
+            <Text>UwU Games but Timer not UwU</Text>
         </Replace>
         <Replace Tag="MPH_OFFICIAL_GAME_NAME" Language="en_US">
             <Text>[COLOR_RED]Official tournament game[ENDCOLOR]</Text>

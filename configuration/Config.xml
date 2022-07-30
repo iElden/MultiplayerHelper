@@ -148,6 +148,8 @@
 		<Row Domain="MphPreset" Value="1" Name="MPH_PRESET_CWC_NAME" Description="MPH_PRESET_CWC_DESC" SortIndex="1"/>
 		<Row Domain="MphPreset" Value="2" Name="MPH_PRESET_CPLFFA_NAME" Description="MPH_PRESET_CPLFFA_DESC" SortIndex="2"/>
 		<Row Domain="MphPreset" Value="3" Name="MPH_PRESET_CIVFRTEAMER_NAME" Description="MPH_PRESET_CIVFRTEAMER_DESC" SortIndex="3"/>
+		<!-- <Row Domain="MphPreset" Value="4" Name="MPH_PRESET_CPLSQUADRON_NAME" Description="MPH_PRESET_CPLSQUADRON_DESC" SortIndex="4"/> -->
+		<Row Domain="MphPreset" Value="5" Name="MPH_PRESET_PHYPHY_NAME" Description="MPH_PRESET_PHYPHY_DESC" SortIndex="5"/>
 
 		<Row Domain="FreeLimits" Value="0" Name="FC_NOTHING_NAME" Description="FC_NOTHING_DESC" SortIndex="1"/>
 		<Row Domain="FreeLimits" Value="1" Name="FC_FREE_NAME" Description="FC_FREE_DESC" SortIndex="2"/>
@@ -335,6 +337,17 @@
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="NO_TRADING_STRATEGICS" TargetValue="0"/>
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="NO_TRADING_CITIES" TargetValue="0" />
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="ALLIANCE_MILITARY" TargetValue="1"/>
+		<!-- Phyphy 1vs1 -->
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="5" TargetGroup="Game" TargetId="MPH_OFFICIAL_GAME" TargetValue="1" />
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="5" TargetGroup="Game" TargetId="NO_DUPLICATE_LEADERS" TargetValue="0" Hash="0" />
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="5" TargetGroup="Game" TargetId="NO_DUPLICATE_CIVILIZATIONS" TargetValue="0" Hash="0" />
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="5" TargetGroup="Game" TargetId="GAME_START_ERA" TargetValue="ERA_ANCIENT" Hash="1"/>
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="5" TargetGroup="Game" TargetId="GAME_TURN_LIMIT" TargetValue="TURNLIMIT_GAMESPEED" Hash="1"/>
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="5" TargetGroup="Map" TargetId="world_age" TargetValue="1" Hash="0"/>
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="5" TargetGroup="Map" TargetId="BBSStratRes" TargetValue="1"/>
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="5" TargetGroup="Map" TargetId="MAP_SIZE" TargetValue="MAPSIZE_DUEL" Hash="1"/>
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="5" TargetGroup="Game" TargetId="GAME_NO_BARBARIANS" TargetValue="1" Hash="0"/>
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="5" TargetGroup="Game" TargetId="CPL_SMARTTIMER" TargetValue="0" Hash="0"/>
 		<!-- Disable smart timer => Disable turn syncro -->
 		<Row SourceGroup="Game" SourceId="CPL_SMARTTIMER" SourceValue="1" TargetGroup="Game" TargetId="CPL_SYNCTURN" TargetValue="0" />
 		<Row SourceGroup="Game" SourceId="CPL_BAN_FORMAT" SourceValue="0" TargetGroup="Game" TargetId="DRAFT_MAP" TargetValue="0" />
