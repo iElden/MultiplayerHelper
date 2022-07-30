@@ -293,7 +293,7 @@
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Map" TargetId="world_age" TargetValue="1" Hash="0"/>
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Map" TargetId="MAP_SIZE" TargetValue="MAPSIZE_STANDARD" Hash="1"/>
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="GAME_NO_BARBARIANS" TargetValue="1" Hash="0"/>
-		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="CPL_SMARTTIMER" TargetValue="0" Hash="0"/>
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="CPL_SMARTTIMER" TargetValue="6" Hash="0"/>
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="DRAFT_MAP" TargetValue="1" Hash="0"/>
 		<!--
 		<Row ParameterId="BAN_POOL_1" Name="LOC_MAP_ARCHIPELAGO_NAME" 
