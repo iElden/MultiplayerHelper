@@ -96,7 +96,8 @@ function SmartTimer()
 	-- 2: Lege
 	-- 3: S1AL
 	-- 4: Sephis
-	-- 5: Phyphy
+	-- 5: Casual
+	-- 6: Phyphy
 	if GameConfiguration.GetValue("CPL_SMARTTIMER") == 1 then
 		return
 	end
@@ -222,6 +223,26 @@ function SmartTimer()
 
 	timer = 30 + currentTurn + g_timeshift
 	
+
+	end
+
+	if GameConfiguration.GetValue("CPL_SMARTTIMER") == 6 then
+
+	if currentTurn <= 15 then
+		timer = 15
+	end
+	if currentTurn > 15 and currentTurn <= 30 then
+		timer = 30
+	end
+	if currentTurn > 30 and currentTurn < 50 then
+		timer = 45
+	end
+	if currentTurn >= 50 and currentTurn < 70 then
+		timer = 65
+	end
+	if currentTurn >= 70 then
+		timer = 80
+	end
 
 	end
 	

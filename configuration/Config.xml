@@ -143,6 +143,7 @@
 		<Row Domain="TimerLimits" Value="2" Name="TIMER_LEGE_NAME" Description="TIMER_LEGE_DESC" SortIndex="6"/>
 		<Row Domain="TimerLimits" Value="3" Name="TIMER_S1A1_NAME" Description="TIMER_S1A1_DESC" SortIndex="3"/>
 		<Row Domain="TimerLimits" Value="4" Name="TIMER_SEPHI_NAME" Description="TIMER_SEPHI_DESC" SortIndex="4"/>
+		<Row Domain="TimerLimits" Value="6" Name="TIMER_PHYPHY_NAME" Description="TIMER_PHYPHY_DESC" SortIndex="7"/>
 
 		<Row Domain="MphPreset" Value="0" Name="MPH_PRESET_NONE_NAME" Description="MPH_PRESET_NONE_DESC" SortIndex="0"/>
 		<Row Domain="MphPreset" Value="1" Name="MPH_PRESET_CWC_NAME" Description="MPH_PRESET_CWC_DESC" SortIndex="1"/>
