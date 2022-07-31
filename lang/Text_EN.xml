@@ -263,6 +263,12 @@
         <Replace Tag="TIMER_CASUAL_DESC" language="en">
             <Text>Ideal for novice or streamers</Text>
         </Replace>
+        <Replace Tag="TIMER_PHYPHY_NAME" language="en">
+            <Text>Blitz</Text>
+        </Replace>
+        <Replace Tag="TIMER_PHYPHY_DESC" language="en">
+            <Text>15s timer that increase by few seconds every 15/20 turns</Text>
+        </Replace>
         <Replace Tag="FC_NOTHING_NAME" language="en">
             <Text>None</Text>
         </Replace>
@@ -858,6 +864,9 @@
         </Replace>
         <Replace Tag="MPH_PRESET_CIVFRTEAMER_NAME" Language="en_US">
             <Text>Squadron CivFR</Text>
+        </Replace>
+        <Replace Tag="MPH_PRESET_CPLSQUADRON_NAME" Language="en_US">
+            <Text>CPL Premier League</Text>
         </Replace>
         <Replace Tag="MPH_PRESET_PHYPHY_NAME" Language="en_US">
             <Text>1v1 Blitz</Text>
