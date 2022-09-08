@@ -3,6 +3,8 @@ include("LobbyTypes"); --MPLobbyMode
 
 include("PlayerSetupLogic"); -- For PlayNow
 
+include("eldenApiGeneral");
+
 -- ===========================================================================
 --	Members
 -- ===========================================================================
@@ -203,6 +205,11 @@ end
 
 function OnHallofFame()
 	UIManager:QueuePopup(Controls.HallofFame, PopupPriority.Current);
+	Close();
+end
+
+function onEldenAPILeaderboard()
+	UIManager:QueuePopup(Controls.EAPILeaderboard, PopupPriority.Current);
 	Close();
 end
 
@@ -910,6 +917,9 @@ function OnWorldBuilder( optionIndex:number, submenu:table )
 	ToggleOption(optionIndex, submenu);
 end
 
+function MPH_OnEldenAPI( optionIndex:number, submenu:table )
+	ToggleOption(optionIndex, submenu);
+end
 
 function OnNewWorldBuilderMap()
 	GameConfiguration.SetToDefaults();
@@ -984,6 +994,10 @@ local m_WorldBuilderSubMenu :table = {
 								{label = "LOC_WORLD_BUILDER_IMPORT",		    callback = OnImportWorldBuilderMap,	tooltip = "LOC_WORLD_BUILDER_IMPORT_TOOLTIP"},
 							};
 
+local mph_EldenApiSubMenu :table = {
+	{label = "LEADERBOARD", callback = onEldenAPILeaderboard, tooltip = "LOC_MPH_LEADERBOARD_TOOLTIP"},
+};
+
 -- ===========================================================================
 --	Main Menu Option Tables
 --	--------------------------------------------------------------------------
@@ -1004,6 +1018,9 @@ local m_defaultMainMenuOptions :table = {
 								{label = "LOC_MAIN_MENU_EXIT_TO_DESKTOP",	callback = OnUserRequestClose,	tooltip = "LOC_MAINMENU_EXIT_GAME_TT"}
 							};
 
+if ExposedMembers.hasEldenAPI then
+	table.insert(m_defaultMainMenuOptions, 5, {label = "ELDEN_API", callback = MPH_OnEldenAPI, tooltip = "ELDEN_API_DESC", submenu = mph_EldenApiSubMenu});
+end
 
 -- ===========================================================================
 --	Animation callback for top-menu option controls.
@@ -1530,7 +1547,10 @@ function Initialize()
 	BuildAllMenus();
 	UpdateMotD();
 	RealizeLogoAndMovie();
-	g_version = " - [COLOR_LIGHTBLUE]MPH / "..GetLocalModVersion("619ac86e-d99d-4bf3-b8f0-8c5b8c402176").."[ENDCOLOR]"
+	g_version = " - [COLOR_LIGHTBLUE]MPH / "..GetLocalModVersion("619ac86e-d99d-4bf3-b8f0-8c5b8c402176").."[ENDCOLOR]";
+	if ExposedMembers.hasEldenAPI then
+		g_version = g_version.." - EldenAPI v"..ExposedMembers.EldenAPI.version.."  logged as : [[COLOR_RED]Admin[ENDCOLOR]] Elden";
+	end
 	Controls.VersionLabel:SetText( tostring(UI.GetAppVersion()..g_version) );
 end
 Initialize();

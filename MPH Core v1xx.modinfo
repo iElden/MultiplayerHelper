@@ -114,6 +114,7 @@
       <Properties>
         <LoadOrder>9999</LoadOrder>
       </Properties>
+		<File>eldenApi/eldenApiGeneral.lua</File>
 		<File>ui/gamesetuplogic.lua</File>
 		<File>ui/hostgame.lua</File>
 		<File>ui/hostgame.xml</File>
@@ -123,6 +124,8 @@
 		<File>ui/setupparameters.lua</File>
 		<File>ui/stagingroom.lua</File>
 		<File>ui/stagingroom.xml</File>
+		<File>ui/Additions/EApiLeaderboard.xml</File>
+	  	<File>ui/Additions/EApiLeaderboard.lua</File>
 				
     </ImportFiles>
 
@@ -457,9 +460,9 @@
 			<LoadOrder>9</LoadOrder>
 		 </Properties>
 		<File>ui/Replacements/unitflagmanager.lua</File>
-	</ImportFiles>	
-	
+	</ImportFiles>
  </InGameActions>
+
   <Files>
     <File>data/MP_helper.lua</File>
 	<File>data/Victories.xml</File>
@@ -482,6 +485,7 @@
 	<File>sql/mph_diplomacy_no_sw.sql</File>
 	
 	<!-- FrontEnd UI -->
+	<File>eldenApi/eldenApiGeneral.lua</File>
 	<File>ui/gamesetuplogic.lua</File>
 	<File>ui/hostgame.lua</File>
 	<File>ui/hostgame.xml</File>
@@ -514,6 +518,8 @@
 	
 		<File>ui/Additions/DropControl.xml</File>
 		<File>ui/Additions/DropControl.lua</File>
+	  	<File>ui/Additions/EApiLeaderboard.xml</File>
+	  	<File>ui/Additions/EApiLeaderboard.lua</File>
 		<File>ui/Additions/MPHOptions.xml</File>
 		<File>ui/Additions/MPHOptions.lua</File>
 		<File>ui/Additions/TurnProcessing.xml</File>
