@@ -126,7 +126,9 @@
 		<File>ui/stagingroom.xml</File>
 		<File>ui/Additions/EApiLeaderboard.xml</File>
 	  	<File>ui/Additions/EApiLeaderboard.lua</File>
-				
+		<File>ui/Additions/EApiProfile.xml</File>
+	  	<File>ui/Additions/EApiProfile.lua</File>
+
     </ImportFiles>
 
         <UpdateDatabase id="CPL_SETTINGS">
@@ -143,6 +145,7 @@
 	<UpdateIcons id="MPHIcons FrontEnd">
 		<File>icons/Anonymous_Icons.xml</File>
 		<File>icons/Sudden_Death_Icons.xml</File>
+		<File>icons/EAPIicons.xml</File>
 	</UpdateIcons>
 	
 
@@ -154,6 +157,10 @@
 			<File>icons/Anonymous_44.dds</File>
 			<File>mode/anonymous/Anonymous_Portrait.dds</File>
 			<File>mode/anonymous/Anonymous_Background.dds</File>
+			<File>icons/EAPIElden.dds</File>
+			<File>icons/EAPICivFR.dds</File>
+			 <File>icons/EAPICPL.dds</File>
+			 <File>icons/EAPICivLan.dds</File>
       </Items>
     </ImportFiles>
 
@@ -520,6 +527,8 @@
 		<File>ui/Additions/DropControl.lua</File>
 	  	<File>ui/Additions/EApiLeaderboard.xml</File>
 	  	<File>ui/Additions/EApiLeaderboard.lua</File>
+	  	<File>ui/Additions/EApiProfile.xml</File>
+	  	<File>ui/Additions/EApiProfile.lua</File>
 		<File>ui/Additions/MPHOptions.xml</File>
 		<File>ui/Additions/MPHOptions.lua</File>
 		<File>ui/Additions/TurnProcessing.xml</File>
@@ -548,6 +557,10 @@
 	<File>icons/Anonymous_44.dds</File>
     <File>icons/Sudden_Death_Icons.xml</File>
 	<File>icons/Sudden_Death_44.dds</File>
-
+	<File>icons/EAPIicons.xml</File>
+	<File>icons/EAPIElden.dds</File>
+  	<File>icons/EAPICivFR.dds</File>
+	<File>icons/EAPICPL.dds</File>
+	<File>icons/EAPICivLan.dds</File>
   </Files>
 </Mod>

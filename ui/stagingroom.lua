@@ -868,6 +868,7 @@ function SendVersion()
 		local bbs_version = GetLocalModVersion(s_bbs_id)
 		local bbg_version = GetLocalModVersion(s_bbg_id)
 		Network.SendChat(".mph_ui_modversion_"..tostring(g_version).."_BBS_"..tostring(bbs_version).."_BBG_"..tostring(bbg_version),-2,hostID)
+		-- Network.SendChat("mph_eapi_iam_discordID=384274248799223818_steamID=76561198208908016_civfrRank=1050_cplRank=1200",-2,-1)
 	end
 end
 

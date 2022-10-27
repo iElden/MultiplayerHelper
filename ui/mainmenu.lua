@@ -208,6 +208,11 @@ function OnHallofFame()
 	Close();
 end
 
+function onEldenAPIProfile()
+	UIManager:QueuePopup(Controls.EAPIProfile, PopupPriority.Current);
+	Close();
+end
+
 function onEldenAPILeaderboard()
 	UIManager:QueuePopup(Controls.EAPILeaderboard, PopupPriority.Current);
 	Close();
@@ -995,7 +1000,8 @@ local m_WorldBuilderSubMenu :table = {
 							};
 
 local mph_EldenApiSubMenu :table = {
-	{label = "LEADERBOARD", callback = onEldenAPILeaderboard, tooltip = "LOC_MPH_LEADERBOARD_TOOLTIP"},
+	{label = "My Profile", callback = onEldenAPIProfile, tooltip = "LOC_MPH_LEADERBOARD_TOOLTIP"},
+	{label = "Leaderboard", callback = onEldenAPILeaderboard, tooltip = "LOC_MPH_LEADERBOARD_TOOLTIP"},
 };
 
 -- ===========================================================================
@@ -1019,7 +1025,7 @@ local m_defaultMainMenuOptions :table = {
 							};
 
 if ExposedMembers.hasEldenAPI then
-	table.insert(m_defaultMainMenuOptions, 5, {label = "ELDEN_API", callback = MPH_OnEldenAPI, tooltip = "ELDEN_API_DESC", submenu = mph_EldenApiSubMenu});
+	table.insert(m_defaultMainMenuOptions, 5, {label = "Elden's API", callback = MPH_OnEldenAPI, tooltip = "ELDEN_API_DESC", submenu = mph_EldenApiSubMenu});
 end
 
 -- ===========================================================================

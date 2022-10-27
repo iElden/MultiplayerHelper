@@ -785,7 +785,7 @@ function Initialize()
 	end
 
 	Controls.ScoreColumn:RegisterCallback( Mouse.eLClick, HandleColumnSort(History_SortByScore));
-	Controls.YouColumn:RegisterCallback( Mouse.eLClick, HandleColumnSort(History_SortByLeader));	
+	Controls.YouColumn:RegisterCallback( Mouse.eLClick, HandleColumnSort(History_SortByLeader));
 	Controls.ResultsColumn:RegisterCallback( Mouse.eLClick, HandleColumnSort(History_SortByResult));
 	Controls.VictoryColumn:RegisterCallback( Mouse.eLClick, HandleColumnSort(History_SortByVictor));
 	Controls.SettingsColumn:RegisterCallback( Mouse.eLClick, HandleColumnSort(History_SortByLastPlayed));

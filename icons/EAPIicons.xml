@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+    <IconTextureAtlases>
+        <Row Name="ICON_ATLAS_EAPI_ELDEN" IconSize="256" IconsPerRow="1" IconsPerColumn="1" Filename="EAPIElden.dds"/>
+        <Row Name="ICON_ATLAS_EAPI_CIVFR" IconSize="128" IconsPerRow="1" IconsPerColumn="1" Filename="EAPICivFR.dds"/>
+		<Row Name="ICON_ATLAS_EAPI_CPL" IconSize="128" IconsPerRow="1" IconsPerColumn="1" Filename="EAPICPL.dds"/>
+		<Row Name="ICON_ATLAS_EAPI_CIVLAN" IconSize="128" IconsPerRow="1" IconsPerColumn="1" Filename="EAPICivLan.dds"/>
+    </IconTextureAtlases>
+
+    <IconDefinitions>
+        <Row Name="ICON_EAPI_ELDEN" Atlas="ICON_ATLAS_EAPI_ELDEN" Index="0"/>
+        <Row Name="ICON_EAPI_CIVFR" Atlas="ICON_ATLAS_EAPI_CIVFR" Index="0"/>
+		<Row Name="ICON_EAPI_CPL" Atlas="ICON_ATLAS_EAPI_CPL" Index="0"/>
+		<Row Name="ICON_EAPI_CIVLAN" Atlas="ICON_ATLAS_EAPI_CIVLAN" Index="0"/>
+    </IconDefinitions>
+
+</GameInfo>

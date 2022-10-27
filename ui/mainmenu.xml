@@ -94,6 +94,7 @@
   <LuaContext    ID="WorldBuilder"        DeferLoad="1"   FileName="WorldBuilderMenu" Hidden="1" />
   <LuaContext    ID="HallofFame"          DeferLoad="1"   FileName="GameSummaries"    Hidden="1" />
   <LuaContext    ID="EAPILeaderboard"     DeferLoad="1"   FileName="EApiLeaderboard"  Hidden="1" />
+  <LuaContext    ID="EAPIProfile"         DeferLoad="1"   FileName="EApiProfile"      Hidden="1" />
   <LuaContext    ID="TutorialSetup"       DeferLoad="1"   FileName="TutorialSetup"    Hidden="1" />
   <LuaContext    ID="Lobby"                               FileName="Lobby"            Hidden="1" />
   <LuaContext    ID="HostGame"                            FileName="HostGame"         Hidden="1" />
