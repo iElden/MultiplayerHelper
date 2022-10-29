@@ -21,20 +21,17 @@
 				<Grid Anchor="C,T" Size="parent-10,39" Texture="Controls_DecoFrame" SliceCorner="19,18" SliceSize="1,1" SliceTextureSize="40,38" Color="41,74,108,255" Offset="0,6">
 					<GridButton ID="CloseButton" Style="ShellButtonOrnateFlat" Anchor="R,C" Size="150,36" Offset="1,0" String="LOC_MULTIPLAYER_BACK"/>
 				</Grid>
-				<Label Style="ShellHeader" Anchor="C,C" String="LOC_MPH_ELDENAPI_TITLE"/>
+				<Label Style="ShellHeader" Anchor="C,C" String="LEADERBOARDS"/>
 				<Grid Style="Divider3Grid" Size="parent+4, 8" Anchor="L,B" Offset="-2,0"/>
 				<Grid Style="Divider3Grid" Size="parent+4, 8" Anchor="L,T" Offset="-2,0" Color="150,150,150,255"/>
 			</Container>
 
 			<!-- Top Menu -->
-			<PullDown ID="RulesetPullDown" Anchor="R,T" Offset="5,68" Style="PullDownBlue" Size="350,24" ScrollThreshold="110" AutoSizePopUp="1" SpaceForScroll="0" />
+			<PullDown ID="RulesetPullDown" Anchor="R,T" Offset="5,68" Style="PullDownBlue" Size="350,24" ScrollThreshold="110" AutoSizePopUp="1" SpaceForScroll="0" Hidden="1"/>
 			<Stack ID="TabStack" Anchor="L,T" Offset="15,60" Padding="5" StackGrowth="Right">
 				<Container Size="auto,auto">
-					<GridButton		ID="SelectedOverviewTab"	Style="ShellTabSelected"	Size="300,41" String="LOC_GAMESUMMARY_OVERVIEW" Hidden="1" />
-				</Container>
-				<Container Size="auto,auto">
-					<GridButton		ID="HistoryTab"					Style="ShellTab"					Size="300,41" String="LOC_MPH_LEADERBOARD" />
-					<GridButton		ID="SelectedHistoryTab" Style="ShellTabSelected"	Size="300,41" String="LOC_MPH_LEADERBOARD" Hidden="1" />
+					<GridButton		ID="HistoryTab"					Style="ShellTab"					Size="300,41" String="CivFR" />
+					<GridButton		ID="SelectedHistoryTab" Style="ShellTabSelected"	Size="300,41" String="CivFR Leaderboard" Hidden="1" />
 				</Container>
 			</Stack>
 
@@ -108,7 +105,7 @@
 
 					</ScrollPanel>
 				</Grid>
-				<GridButton Anchor="R,B" Offset="0,5" ID="ViewGameDetails" Style="ButtonConfirm" Size="300,41" FontStyle="Stroke" ColorSet="ButtonCS" String="SHOW_HISTORY" />
+				<GridButton Anchor="R,B" Offset="0,5" ID="ViewGameDetails" Style="ButtonConfirm" Size="300,41" FontStyle="Stroke" ColorSet="ButtonCS" String="Show Profile" />
 
 				<GridButton Hidden="1" Anchor="L,B" Offset="0,5" ID="ReplayGame" Style="MainButton" Size="300,41" FontStyle="Stroke" ColorSet="ButtonCS" String="LOC_GAMESUMMARY_LOADCONFIGURATION" ToolTip="Not yet implemented" />
 			</Container>

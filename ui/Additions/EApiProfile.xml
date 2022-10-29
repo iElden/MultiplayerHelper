@@ -27,7 +27,7 @@
             </Container>
 
             <!-- Top Menu -->
-            <PullDown ID="RulesetPullDown" Anchor="R,T" Offset="5,68" Style="PullDownBlue" Size="700,24" ScrollThreshold="110" AutoSizePopUp="1" SpaceForScroll="0"/>
+            <PullDown ID="RulesetPullDown" Anchor="R,T" Offset="5,68" Style="PullDownBlue" Size="700,24" ScrollThreshold="110" AutoSizePopUp="1" SpaceForScroll="0" Hidden="1"/>
             <Stack ID="TabStack" Anchor="L,T" Offset="15,60" Padding="5" StackGrowth="Right">
                 <Container Size="auto,auto">
                     <GridButton ID="OverviewTab" Style="ShellTab" Size="300,41" String="LOC_GAMESUMMARY_OVERVIEW"/>

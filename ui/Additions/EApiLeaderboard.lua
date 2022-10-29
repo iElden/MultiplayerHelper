@@ -554,11 +554,6 @@ function History_PopulateGames()
 		instance.PlayerLeaderIcon:SetIcon(v[6] or "ICON_LEADER_DEFAULT")
 		instance.PlayerCivilizationIcon:SetIcon("ICON_CIVILIZATION_UNKNOWN")
 		instance.VictorName:SetText(tostring(v[3]).." - "..tostring(v[4]))
-
-        instance.Button:RegisterCallback( Mouse.eLDblClick, function()
-            UI.PlaySound("Main_Menu_Mouse_Over");
-            OnGameDetailsClicked(g_SelectedGameId) 
-        end);
 	end
 
 	Controls.ListingsStack:CalculateSize();
@@ -578,110 +573,6 @@ function History_RefreshSelectionState()
 	end
 
 	Controls.ViewGameDetails:SetDisabled(g_SelectedGameId == nil);
-end
-		
-
-function History_SortByScore(a,b)
-	-- Score(d), LastPlayed(d), GameId
-	local aScore = a.Score or -1;
-	local bScore = b.Score or -1;
-
-	if(aScore ~= bScore) then
-		return aScore > bScore;
-	elseif(a.LastPlayed ~= b.LastPlayed) then
-		return a.LastPlayed > b.LastPlayed
-	else
-		return a.GameId < b.GameId;
-	end
-
-end
-
-function History_SortByLeader(a,b)
-	-- LeaderName(a), CivilizationName(a), Score(d), LastPlayed(d), GameId
-	local aScore = a.Score or -1;
-	local bScore = b.Score or -1;
-
-	local aLeader = a.MyLeaderName;
-	local bLeader = b.MyLeaderName;
-
-	local aCivilization = a.MyCivilizationName;
-	local bCivilization = b.MyCivilizationName;
-	
-	if(aLeader ~= bLeader) then
-		return Locale.Compare(aLeader, bLeader) == -1;
-	elseif(aCivilization ~= bCivilization) then
-		return Locale.Compare(aCivilization, bCivilization) == -1;
-	elseif(aScore ~= bScore) then
-		return aScore > bScore;
-	elseif(a.LastPlayed ~= b.LastPlayed) then
-		return a.LastPlayed > b.LastPlayed;
-	else
-		return a.GameId < b.GameId;
-	end
-end
-
-function History_SortByResult(a,b)	
-	-- Victory, Score(d), LastPlayed(d), GameId
-	-- Defeat, Score(d), LastPlayed(d), GameId
-	local aScore = a.Score or -1;
-	local bScore = b.Score or -1;
-
-	local aVictory = a.MyVictory;
-	local bVictory = b.MyVictory;
-
-	if(aVictory ~= bVictory) then
-		return aVictory;
-	elseif(aScore ~= bScore) then
-		return aScore > bScore;
-	elseif(a.LastPlayed ~= b.LastPlayed) then
-		return a.LastPlayed > b.LastPlayed;
-	else
-		return a.GameId < b.GameId;
-	end
-end
-
-function History_SortByVictor(a,b)
-	-- You, Score(d), LastPlayed(d), GameId
-	-- LeaderName, Score(d), LastPlayed(d), GameId
-	-- Nobody, Score(d), LastPlayed(d), GameId
-	local aScore = a.Score or -1;
-	local bScore = b.Score or -1;
-
-	local aYou = a.MyVictory;
-	local bYou = b.MyVictory
-
-	local aLeader = a.VictorLeaderName or nil;
-	local bLeader = b.VictorLeaderName or nil;
-
-	if(aYou ~= bYou) then
-		return aYou;
-	elseif(aLeader ~= bLeader) then
-		if(aLeader ~= nil and bLeader ~= nil) then
-			return Locale.Compare(aLeader, bLeader) == -1;
-		else
-			return aLeader ~= nil;
-		end
-	elseif(aScore ~= bScore) then
-		return aScore > bScore;
-	elseif(a.LastPlayed ~= b.LastPlayed) then
-		return a.LastPlayed > b.LastPlayed;
-	else
-		return a.GameId < b.GameId;
-	end		
-end
-
-function History_SortByLastPlayed(a,b)
-	-- LastPlayed(d), Score(d), GameId
-	local aScore = a.Score or -1;
-	local bScore = b.Score or -1;
-
-	if(a.LastPlayed ~= b.LastPlayed) then
-		return a.LastPlayed > b.LastPlayed;
-	elseif(aScore ~= bScore) then
-		return aScore > bScore;
-	else
-		return a.GameId < b.GameId;
-	end
 end
 
 ----------------------------------------------------------------   
@@ -751,44 +642,14 @@ function Initialize()
 	ContextPtr:SetInputHandler( InputHandler );
 	g_PopupDialog = PopupDialog:new( "GameSummaries" );
 	
-	Controls.HistoryTab:RegisterCallback(Mouse.eLClick, function() 
-		UI.PlaySound("Main_Menu_Mouse_Over");
-		OnHistoryTabClicked() 
-	end);
-	
 	for i,v in ipairs(g_TabControls) do
 		v[1]:RegisterCallback( Mouse.eLClick, function()
 			UI.PlaySound("Main_Menu_Mouse_Over");
 			SelectTab(i);
 		end);
 	end
-
-	Controls.ViewGameDetails:RegisterCallback(Mouse.eLClick, function() 
-		UI.PlaySound("Main_Menu_Mouse_Over");
-		OnGameDetailsClicked(g_SelectedGameId) 
-	end);
 	
 	Controls.ReplayGame:SetDisabled(true);
-
-	-- Apply standard functionality when sorting.
-	function HandleColumnSort(func)
-		return function()
-			UI.PlaySound("Main_Menu_Mouse_Over");
-			if g_GameListingsSortFunction == func then
-				g_SortDirectionReversed = not g_SortDirectionReversed;
-			else
-				g_SortDirectionReversed = false;
-			end
-			g_GameListingsSortFunction = func;
-			History_PopulateGames();
-		end;
-	end
-
-	Controls.ScoreColumn:RegisterCallback( Mouse.eLClick, HandleColumnSort(History_SortByScore));
-	Controls.YouColumn:RegisterCallback( Mouse.eLClick, HandleColumnSort(History_SortByLeader));
-	Controls.ResultsColumn:RegisterCallback( Mouse.eLClick, HandleColumnSort(History_SortByResult));
-	Controls.VictoryColumn:RegisterCallback( Mouse.eLClick, HandleColumnSort(History_SortByVictor));
-	Controls.SettingsColumn:RegisterCallback( Mouse.eLClick, HandleColumnSort(History_SortByLastPlayed));
 
 	Controls.CloseButton:RegisterCallback( Mouse.eLClick, function()
 		UI.PlaySound("Main_Menu_Mouse_Over");
