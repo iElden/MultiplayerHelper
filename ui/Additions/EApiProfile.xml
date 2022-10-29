@@ -102,7 +102,7 @@
                                         <Label Anchor="C,T" Style="FontNormal18" String="Tournament Result"/>
                                         <Box Color="10,60,78,255" Anchor="C,T" Size="Parent-120,3"/>
                                     </Stack> <!-- End Header Tournament Result -->
-                                    <Stack Offset="20,5" Padding="40"> <!-- Tournament result Stack -->
+                                    <Stack Offset="20,5" Padding="40" Hidden="1"> <!-- Tournament result Stack -->
                                         <Container Hidden="0" ID="CivFRRank" Size="330,auto" Anchor="L,T">
                                             <Stack Anchor="L,C" StackGrowth="Right" Padding="15">
                                                 <Image ID="CompetitionIcon" Size="96,96" Icon="ICON_EAPI_CIVFR"/>
