@@ -32,12 +32,8 @@ g_TabControls = {
 };
 
 -- Global Variables
-g_GamesManager = InstanceManager:new("GameInstance", "Button", Controls.ListingsStack);
-g_LeaderProgressManager = InstanceManager:new("LeaderProgressInstance", "Icon", Controls.LeaderProgressStack);
-g_VictoryProgressManager = InstanceManager:new("VictoryProgressInstance", "Root", Controls.VictoryProgressStack);
+g_RankingManager = InstanceManager:new("RankingInstance", "RankingContainer", Controls.RankingStack);
 
-g_HighlightsManager = InstanceManager:new("StatInstance", "Root", Controls.HighlightsStack);
-g_StatisticsBlockManager = InstanceManager:new("StatBlockInstance", "RootStack", Controls.StatisticsStack);
 g_StatisticsManagers = {};
 
 g_AvailableRulesets = nil; 			-- Array of available rulesets.
@@ -140,6 +136,25 @@ function OnGameDetailsClicked(id)
 end
 
 ----------------------------------------------------------------
+
+function Profile_PopulateRanking()
+	g_SelectedGameId = nil;
+	g_GameListings = {};
+	g_RankingManager:ResetInstances();
+	for i,v in ipairs(ExposedMembers.EldenAPI.profile.rating) do
+		local instance = g_RankingManager:GetInstance();
+
+		instance.RankingServerIcon:SetIcon(v[1]);
+		instance.RankingLine1:SetText(v[2]);
+		instance.RankingLine2:SetText(v[3]);
+		instance.RankingLine3:SetText(v[4]);
+		instance.RankingLine4:SetText(v[5]);
+	end
+
+	Controls.RankingStack:CalculateSize();
+	Controls.RankingStack:ReprocessAnchoring();
+end
+
 function OnShow()
 	UpdateGlobalCache();
 	local screenX, screenY:number  = UIManager:GetScreenSizeVal();
@@ -152,9 +167,11 @@ function OnShow()
 	end
 
 	Controls.LogoContainer:SetHide(hideLogo);
-	PopulateAvailableRulesets();
-	SelectRuleset(1);
 	SelectTab(1);
+	-- Set Profile Info
+	Controls.PlayerIcon:SetIcon(ExposedMembers.EldenAPI.profile.icon);
+	Controls.PlayerName:SetText(ExposedMembers.EldenAPI.profile.name);
+	Profile_PopulateRanking();
 end
 
 function OnHide()

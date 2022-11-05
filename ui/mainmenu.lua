@@ -1555,7 +1555,7 @@ function Initialize()
 	RealizeLogoAndMovie();
 	g_version = " - [COLOR_LIGHTBLUE]MPH / "..GetLocalModVersion("619ac86e-d99d-4bf3-b8f0-8c5b8c402176").."[ENDCOLOR]";
 	if ExposedMembers.hasEldenAPI then
-		g_version = g_version.." - EldenAPI v"..ExposedMembers.EldenAPI.version.."  logged as : [[COLOR_RED]Admin[ENDCOLOR]] Elden";
+		g_version = g_version.." - EldenAPI v"..ExposedMembers.EldenAPI.version.."  logged as : "..ExposedMembers.EldenAPI.profile.prefix..ExposedMembers.EldenAPI.profile.name;
 	end
 	Controls.VersionLabel:SetText( tostring(UI.GetAppVersion()..g_version) );
 end

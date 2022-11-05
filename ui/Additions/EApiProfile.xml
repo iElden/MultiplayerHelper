@@ -46,13 +46,13 @@
                                 <Stack Anchor="L,T" ID="OverviewStack" StackGrowth="Bottom" Padding="10" Size="parent,10">
                                     <Container Offset="20,10" Size="parent,150">
                                         <Stack Anchor="L,C" StackGrowth="Right" Padding="10">
-                                            <Image ID="PlayerLeaderIcon" Size="128,128" Icon="ICON_EAPI_ELDEN"/>
+                                            <Image ID="PlayerIcon" Size="128,128" Icon="ICON_LEADER_DEFAULT"/>
                                             <Stack Anchor="L,C" StackGrowth="Bottom" Padding="5">
-                                                <Label ID="PlayerName" Anchor="L,T" TextOffset="500" ColorSet="BodyTextCool" FontSize="54" FontStyle="stroke" String="iElden"/>
+                                                <Label ID="PlayerName" Anchor="L,T" TextOffset="500" ColorSet="BodyTextCool" FontSize="54" FontStyle="stroke" String="PLAYER_NAME"/>
                                                 <Stack Anchor="L,T" StackGrowth="Right" Padding="5">
-                                                    <Image ID="PlayerGuildIcon" Size="32,32" Icon="ICON_LEADER_MVEMBA"/>
+                                                    <Image ID="PlayerGuildIcon" Size="32,32" Icon="ICON_LEADER_DEFAULT"/>
                                                     <Label ID="PlayerGuildName" Anchor="L,C" TruncateWidth="170" TruncatedTooltip="1" Style="FontNormal14"
-                                                           ColorSet="BodyTextCool" FontStyle="stroke" String="FUN - Fallait un nom"/>
+                                                           ColorSet="BodyTextCool" FontStyle="stroke" String="No guild"/>
                                                 </Stack>
                                             </Stack>
                                         </Stack>
@@ -61,47 +61,18 @@
                                         <Label Anchor="C,T" Style="FontNormal18" String="Current Ranking"/>
                                         <Box Color="10,60,78,255" Anchor="C,T" Size="Parent-120,3"/>
                                     </Stack>
-                                    <Label Anchor="L,T" Offset="20,10" Style="FontNormal18" String="Player didn't have any current Rank in any server" Hidden="1"/>
-                                    <Stack Anchor="L,C" StackGrowth="Right" Offset="20,10">
-                                        <Container Hidden="0" ID="CivFRRank" Size="320,auto" Anchor="L,T">
-                                            <Stack Anchor="L,C" StackGrowth="Right" Padding="5">
-                                                <Image ID="CompetitionIcon" Size="96,96" Icon="ICON_EAPI_CIVFR"/>
-                                                <Stack Anchor="L,C" StackGrowth="Bottom">
-                                                    <Label ID="PlayerLeaderName" Anchor="L,T" Style="FontFlair20" ColorSet="BodyTextCool" FontStyle="stroke"
-                                                           String="CivFR - FFA"/>
-                                                    <Label ID="PlayerLeaderName" Anchor="L,T" Style="FontNormal18" ColorSet="BodyTextCool" FontStyle="stroke" Offset="0,10"
-                                                           String="1224 Points"/>
-                                                    <Label ID="PlayerCivilizationName" Anchor="L,C" Style="FontNormal14"
-                                                           ColorSet="BodyTextCool" FontStyle="stroke" String="1 Win - 0 Lose (100%) / 0 First"/>
-                                                    <Label ID="PlayerCivilizationName" Anchor="L,C" Style="FontNormal14"
-                                                           ColorSet="BodyTextCool" FontStyle="stroke" String="#94 (Top 34.6%)"/>
-                                                </Stack>
-                                            </Stack>
-                                        </Container>
-                                        <Container Hidden="0" ID="CivFRRank" Size="320,auto" Anchor="L,T">
-                                            <Stack Anchor="L,C" StackGrowth="Right" Padding="5">
-                                                <Image ID="CompetitionIcon" Size="96,96" Icon="ICON_EAPI_CPL"/>
-                                                <Stack Anchor="L,C" StackGrowth="Bottom">
-                                                    <Label ID="PlayerLeaderName" Anchor="L,T" Style="FontFlair20" ColorSet="BodyTextCool" FontStyle="stroke"
-                                                           String="CPL - FFA"/>
-                                                    <Label ID="PlayerLeaderName" Anchor="L,T" Style="FontNormal18" ColorSet="BodyTextCool" FontStyle="stroke" Offset="0,10"
-                                                           String="1200 Points"/>
-                                                    <Label ID="PlayerCivilizationName" Anchor="L,C" Style="FontNormal14"
-                                                           ColorSet="BodyTextCool" FontStyle="stroke" String="0 Win - 0 Lose (0%) / 0 First"/>
-                                                    <Label ID="PlayerCivilizationName" Anchor="L,C" Style="FontNormal14"
-                                                           ColorSet="BodyTextCool" FontStyle="stroke" String="Chieftain"/>
-                                                </Stack>
-                                            </Stack>
-                                        </Container>
-                                    </Stack>
+                                    <Label ID="NoRankLabel" Anchor="L,T" Offset="20,10" Style="FontNormal18" String="Player didn't have any current Rank in any server" Hidden="1"/>
+                                    <Stack ID="RankingStack" Anchor="L,C" StackGrowth="Right" Offset="20,10"/>
                                     <Stack Anchor="C,T" Offset="0,8" StackPadding="7">
                                         <Label Anchor="C,T" Style="FontNormal18" String="High Achievement"/>
                                         <Box Color="10,60,78,255" Anchor="C,T" Size="Parent-120,3"/>
                                     </Stack>
+                                    <Label Anchor="L,T" Offset="20,10" Style="FontNormal18" String="In development ..."/>
                                     <Stack Anchor="C,T" Offset="0,8" StackPadding="7"> <!-- Start Header Tournament Result -->
                                         <Label Anchor="C,T" Style="FontNormal18" String="Tournament Result"/>
                                         <Box Color="10,60,78,255" Anchor="C,T" Size="Parent-120,3"/>
                                     </Stack> <!-- End Header Tournament Result -->
+                                    <Label Anchor="L,T" Offset="20,10" Style="FontNormal18" String="In development ..."/>
                                     <Stack Offset="20,5" Padding="40" Hidden="1"> <!-- Tournament result Stack -->
                                         <Container Hidden="0" ID="CivFRRank" Size="330,auto" Anchor="L,T">
                                             <Stack Anchor="L,C" StackGrowth="Right" Padding="15">
@@ -167,92 +138,21 @@
     <MakeInstance Name="PopupDialog"/>
     <LuaContext ID="GameDetails" DeferLoad="1" FileName="GameSummaries_GameDetails" Hidden="1"/>
 
-    <Instance Name="StatInstance">
-        <Container ID="Root" Size="470,32">
-            <Container Size="200,32">
-                <Stack ID="TitleStack" Anchor="R,C" Size="auto,parent" StackGrowth="Right">
-                    <Image ID="TitleIcon" Size="32,32" Icon="ICON_LEADER_CLEOPATRA"/>
-
-                    <Label ID="TitleCaption" Style="FontNormal16" Anchor="L,C" WrapWidth="parent" String="$Favorite Leader$"/>
+    <Instance Name="RankingInstance">
+        <Container ID="RankingContainer" Size="320,auto" Anchor="L,T">
+            <Stack Anchor="L,C" StackGrowth="Right" Padding="5">
+                <Image ID="RankingServerIcon" Size="96,96" Icon="ICON_EAPI_CIVFR"/>
+                <Stack Anchor="L,C" StackGrowth="Bottom">
+                    <Label ID="RankingLine1" Anchor="L,T" Style="FontFlair20" ColorSet="BodyTextCool" FontStyle="stroke"
+                           String="CivFR - FFA"/>
+                    <Label ID="RankingLine2" Anchor="L,T" Style="FontNormal18" ColorSet="BodyTextCool" FontStyle="stroke" Offset="0,10"
+                           String="1224 Points"/>
+                    <Label ID="RankingLine3" Anchor="L,C" Style="FontNormal14"
+                           ColorSet="BodyTextCool" FontStyle="stroke" String="1 Win - 0 Lose (100%) / 0 First"/>
+                    <Label ID="RankingLine4" Anchor="L,C" Style="FontNormal14"
+                           ColorSet="BodyTextCool" FontStyle="stroke" String="#94 (Top 34.6%)"/>
                 </Stack>
-            </Container>
-            <Box Anchor="L,C" Size="6,2" Offset="204,0" Color="46,70,95,255"/>
-            <Stack ID="ValueStack" StackGrowth="Right" Size="auto,parent" Anchor="L,C" Offset="214,0" Padding="5">
-                <Image ID="ValueIcon" Size="32,32" Icon="ICON_LEADER_CLEOPATRA"/>
-                <Stack ID="AnnotationStack" Size="parent,auto" StackGrowth="Bottom" Anchor="L,C">
-                    <Label ID="ValueCaption" Style="FontNormal16" Anchor="L,T" WrapWidth="270" String="$Cleopatra$"/>
-                    <Label ID="Annotation" Style="FontNormal14" Anchor="L,T" WrapWidth="270" String="$(12 wars won)$"/>
-                </Stack>
-
             </Stack>
         </Container>
-    </Instance>
-
-    <Instance Name="LeaderProgressInstance">
-        <Image ID="Icon" Size="64,64" Icon="ICON_LEADER_CLEOPATRA" Color="255,255,255,50"/>
-    </Instance>
-    <Instance Name="VictoryProgressInstance">
-        <Image ID="Root" Size="41,111" Offset="0,60" TextureOffset="0,30" Texture="Controls_Pennant">
-            <Image ID="Icon" Anchor="C,T" Offset="0,-62" Size="80,80" Icon="ICON_VICTORY_SCORE"/>
-        </Image>
-    </Instance>
-    <Instance Name="GameInstance">
-        <GridButton ID="Button" Style="ButtonControl" Size="parent,80">
-            <Stack StackGrowth="Right" Offset="5,0" Size="auto,80" Anchor="L,T">
-                <!-- Score -->
-                <Container Size="95,parent">
-                    <Label ID="Score" Anchor="C,C" Style="FontNormal22" ColorSet="BodyTextCool" FontStyle="stroke" String="$Score$"/>
-                </Container>
-
-                <!-- You -->
-                <Container Size="260,parent">
-                    <Stack Anchor="L,C" StackGrowth="Right" Padding="5">
-                        <Image ID="PlayerLeaderIcon" Size="64,64" Icon="ICON_LEADER_GANDHI"/>
-                        <Stack Anchor="L,C" StackGrowth="Bottom">
-                            <Label ID="PlayerLeaderName" Anchor="L,T" WrapWidth="parent-70" Style="FontNormal18" ColorSet="BodyTextCool" FontStyle="stroke" String="$Gandhi$"/>
-                            <Stack Anchor="L,T" StackGrowth="Right" Padding="5">
-                                <Container Size="22,22">
-                                    <Image ID="PlayerCivilizationIconBG" Size="22,22" Texture="CircleBacking22"/>
-                                    <Image ID="PlayerCivilizationIcon" Size="22,22" Icon="ICON_CIVILIZATION_INDIA"/>
-                                </Container>
-                                <Label ID="PlayerCivilizationName" Anchor="L,C" TruncateWidth="170" TruncatedTooltip="1" Style="FontNormal16" ColorSet="BodyTextCool"
-                                       FontStyle="stroke" String="$India$"/>
-                            </Stack>
-                        </Stack>
-                    </Stack>
-                </Container>
-
-                <!-- Results -->
-                <Container Size="150,parent">
-                    <Label ID="VictoryOrDefeat" Anchor="C,C" Style="FontNormal22" ColorSet="BodyTextCool" FontStyle="stroke" String="$VICTORY!$"/>
-                </Container>
-
-                <!-- Victory -->
-                <Container Size="240,parent">
-                    <Stack Anchor="L,C" StackGrowth="Right" Padding="5">
-                        <Image ID="VictoryIcon" Size="64,64" Icon="ICON_VICTORY_CONQUEST"/>
-                        <Stack Anchor="L,C" StackGrowth="Bottom">
-                            <Label ID="VictorName" WrapWidth="parent-69" Style="FontNormal18" ColorSet="BodyTextCool" FontStyle="stroke" String="$You$"/>
-                            <Label ID="VictoryName" WrapWidth="parent-69" Style="FontNormal14" ColorSet="BodyTextCool" FontStyle="stroke" String="$Conquest Victory$"/>
-
-                        </Stack>
-                    </Stack>
-                </Container>
-
-                <!-- Settings -->
-                <Container Size="220,parent">
-                    <Stack Anchor="R,C" Size="parent,default">
-                        <Stack Anchor="C,T" Size="default,32" StackGrowth="Right">
-                            <Image ID="GameSpeedIcon" Size="32,32" Icon="ICON_GAMESPEED_STANDARD"/>
-                            <Image ID="PlayerDifficultyIcon" Size="32,32" Icon="ICON_DIFFICULTY_DEITY"/>
-                            <Label ID="Turns" Anchor="L,C" WrapWidth="parent" Style="FontNormal14" ColorSet="BodyTextCool" FontStyle="stroke" String="$TURN [ICON_TURN] 500$"/>
-
-                        </Stack>
-                        <Label ID="StartEra" Anchor="C,T" WrapWidth="parent" Style="FontNormal14" ColorSet="BodyTextCool" FontStyle="stroke" String="$Started in Ancient Era$"/>
-                        <Label ID="LastPlayed" Anchor="C,T" WrapWidth="parent" Style="FontNormal14" ColorSet="BodyTextCool" FontStyle="stroke" String="$5/22/2018 10:30 AM$"/>
-                    </Stack>
-                </Container>
-            </Stack>
-        </GridButton>
     </Instance>
 </Context>
