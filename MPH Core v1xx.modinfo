@@ -14,8 +14,8 @@
   
 	<LocalizedText>
 		<Text id="LOC_MPH_TITLE">
-			<en_US>Multiplayer Helper 1.4.6</en_US>
-			<fr_FR>Multiplayer Helper 1.4.6</fr_FR>
+			<en_US>Multiplayer Helper 1.4.6 (+EAPI)</en_US>
+			<fr_FR>Multiplayer Helper 1.4.6 (+EAPI)</fr_FR>
 		</Text>
 		<Text id="LOC_MPH_TEASER">
 			<en_US>Esport oriented mod to help tournament and game statibility.</en_US>
