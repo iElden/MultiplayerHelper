@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # User configuration
-DISCORD_ID=181879507756515328
+DISCORD_ID=384274248799223818
 
 # Dev configuration
-API_BASE="http://127.0.0.1:45612/"
+API_BASE="http://civ.ielden.eu/"
 TARGET_PATH="eldenApiGeneral.lua"
 
 cd "$(dirname "$0")"
