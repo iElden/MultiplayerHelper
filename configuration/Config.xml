@@ -144,6 +144,7 @@
 		<Row Domain="TimerLimits" Value="3" Name="TIMER_S1A1_NAME" Description="TIMER_S1A1_DESC" SortIndex="3"/>
 		<Row Domain="TimerLimits" Value="4" Name="TIMER_SEPHI_NAME" Description="TIMER_SEPHI_DESC" SortIndex="4"/>
 		<Row Domain="TimerLimits" Value="6" Name="TIMER_PHYPHY_NAME" Description="TIMER_PHYPHY_DESC" SortIndex="7"/>
+		<Row Domain="TimerLimits" Value="7" Name="TIMER_2VI2_NAME" Description="TIMER_2VI2_DESC" SortIndex="8"/>
 
 		<Row Domain="MphPreset" Value="0" Name="MPH_PRESET_NONE_NAME" Description="MPH_PRESET_NONE_DESC" SortIndex="0"/>
 		<Row Domain="MphPreset" Value="1" Name="MPH_PRESET_CWC_NAME" Description="MPH_PRESET_CWC_DESC" SortIndex="1"/>
@@ -151,6 +152,7 @@
 		<Row Domain="MphPreset" Value="3" Name="MPH_PRESET_CIVFRTEAMER_NAME" Description="MPH_PRESET_CIVFRTEAMER_DESC" SortIndex="3"/>
 		<Row Domain="MphPreset" Value="4" Name="MPH_PRESET_CPLSQUADRON_NAME" Description="MPH_PRESET_CPLSQUADRON_DESC" SortIndex="4"/>
 		<Row Domain="MphPreset" Value="5" Name="MPH_PRESET_PHYPHY_NAME" Description="MPH_PRESET_PHYPHY_DESC" SortIndex="5"/>
+		<Row Domain="MphPreset" Value="6" Name="MPH_PRESET_2VI2_NAME" Description="MPH_PRESET_2VI2_DESC" SortIndex="6"/>
 
 		<Row Domain="FreeLimits" Value="0" Name="FC_NOTHING_NAME" Description="FC_NOTHING_DESC" SortIndex="1"/>
 		<Row Domain="FreeLimits" Value="1" Name="FC_FREE_NAME" Description="FC_FREE_DESC" SortIndex="2"/>
@@ -315,7 +317,7 @@
 		
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="BAN_POOL_1" TargetValue="0" Hash="0"/>
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="BAN_POOL_2" TargetValue="0" Hash="0"/>
-		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="BAN_POOL_3" TargetValue="0" Hash="0"/>
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="BAN_POOL_3" TargetValue="1" Hash="0"/>
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="BAN_POOL_4" TargetValue="0" Hash="0"/>
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="BAN_POOL_5" TargetValue="1" Hash="0"/>
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="BAN_POOL_6" TargetValue="1" Hash="0"/>
@@ -325,15 +327,15 @@
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="BAN_POOL_10" TargetValue="0" Hash="0"/>
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="BAN_POOL_11" TargetValue="0" Hash="0"/>
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="BAN_POOL_12" TargetValue="0" Hash="0"/>
-		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="BAN_POOL_13" TargetValue="1" Hash="0"/>
-		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="BAN_POOL_14" TargetValue="1" Hash="0"/>
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="BAN_POOL_13" TargetValue="0" Hash="0"/>
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="BAN_POOL_14" TargetValue="0" Hash="0"/>
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="BAN_POOL_15" TargetValue="1" Hash="0"/>
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="CPL_BAN_FORMAT" TargetValue="3" Hash="0"/>
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="DRAFT_TIMER" TargetValue="1" />
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="DRAFT_SLOT_ORDER" TargetValue="3" />
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="NO_TRADING_CITIES" TargetValue="1" />
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Map" TargetId="resources" TargetValue="2"/>
-		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Map" TargetId="BBSStratRes" TargetValue="0"/>
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Map" TargetId="BBSStratRes" TargetValue="3"/>
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="NO_TRADING_GOLD" TargetValue="0"/>
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="NO_TRADING_STRATEGICS" TargetValue="0"/>
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="NO_TRADING_CITIES" TargetValue="0" />
@@ -387,6 +389,26 @@
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="5" TargetGroup="Game" TargetId="GAME_NO_BARBARIANS" TargetValue="1" Hash="0"/>
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="5" TargetGroup="Game" TargetId="CPL_SMARTTIMER" TargetValue="6" Hash="0"/>
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="5" TargetGroup="Game" TargetId="CPL_BAN_FORMAT" TargetValue="0" Hash="0"/>
+		<!-- Falcon 2vs2 -->
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Game" TargetId="MPH_OFFICIAL_GAME" TargetValue="1" />
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Game" TargetId="PRIVATE_GAME" TargetValue="1" />
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Game" TargetId="NO_DUPLICATE_LEADERS" TargetValue="1" Hash="0" />
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Game" TargetId="NO_DUPLICATE_CIVILIZATIONS" TargetValue="1" Hash="0" />
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Game" TargetId="GAME_START_ERA" TargetValue="ERA_ANCIENT" Hash="1"/>
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Game" TargetId="CPL_SMARTTIMER" TargetValue="7"/>
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Game" TargetId="CPL_BAN_FORMAT" TargetValue="0"/>
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Map" TargetId="MAP_SIZE" TargetValue="MAPSIZE_TINY" Hash="1"/>
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Map" TargetId="world_age" TargetValue="1"/>
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Map" TargetId="temperature" TargetValue="1"/>
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Map" TargetId="resources" TargetValue="3"/>
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Map" TargetId="BBSStratRes" TargetValue="3"/>
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Map" TargetId="sea_level" TargetValue="3"/>
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Game" TargetId="NO_TRADING_CITIES" TargetValue="1" />
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Game" TargetId="GAME_NO_BARBARIANS" TargetValue="1" Hash="0"/>
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Game" TargetId="GAME_TURN_LIMIT" TargetValue="TURNLIMIT_CUSTOM" Hash="1"/>
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Game" TargetId="GAME_MAX_TURNS" TargetValue="130"/>
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Game" TargetId="GAME_REALISM" TargetValue="0"/>
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Game" TargetId="CITY_STATE_COUNT" TargetValue="4" Hash="0"/>
 		<!-- Disable smart timer => Disable turn syncro -->
 		<Row SourceGroup="Game" SourceId="CPL_SMARTTIMER" SourceValue="1" TargetGroup="Game" TargetId="CPL_SYNCTURN" TargetValue="0" />
 		<Row SourceGroup="Game" SourceId="CPL_BAN_FORMAT" SourceValue="0" TargetGroup="Game" TargetId="DRAFT_MAP" TargetValue="0" />

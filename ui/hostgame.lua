@@ -51,7 +51,7 @@ function OnSetParameterValues(pid: string, values: table)
 				if(indexed_values[v.Value]) then
 					table.insert(resolved_values, v);
 				end
-			end		
+			end
 			g_GameParameters:SetParameterValue(parameter, resolved_values);
 			Network.BroadcastGameConfig();	
 		end
@@ -61,6 +61,7 @@ end
 -- ===========================================================================
 function OnSetParameterValue(pid: string, value: number)
 	if(g_GameParameters) then
+		CheckPreset()
 		local kParameter: table = g_GameParameters.Parameters and g_GameParameters.Parameters[pid] or nil;
 		if(kParameter and kParameter.Value ~= nil) then	
             g_GameParameters:SetParameterValue(kParameter, value);
@@ -931,6 +932,74 @@ function CWC_Natural_Wonders()
 	GameConfiguration.SetValue("EXCLUDE_NATURAL_WONDERS",default)
 end
 
+function TwoVITwo_Natural_Wonders()
+	local default = {}
+	default = {	
+				"FEATURE_GIBRALTAR",
+				"FEATURE_TORRES_DEL_PAINE",
+				"FEATURE_GRAND_MESA",
+				"FEATURE_GIANTS_CAUSEWAY",
+				"FEATURE_DALLOL",
+				"FEATURE_EYJAFJALLAJOKULL",
+				"FEATURE_GOBUSTAN",
+				"FEATURE_OUNIANGA",
+				"FEATURE_CERRO_DE_POTOSI",
+				"FEATURE_ZHANGYE_DANXIA",
+				"FEATURE_HA_LONG_BAY",
+				"FEATURE_BERMUDA_TRIANGLE",
+				"FEATURE_VREDEFORT_DOME",
+				"FEATURE_RORAIMA",
+				"FEATURE_SINAI",
+				"FEATURE_BARRINGER_CRATER",
+				"FEATURE_MOSI_OA_TUNYA",
+				"FEATURE_VESUVIUS",
+				"FEATURE_MOTLATSE_CANYON",
+				"FEATURE_MATTERHORN",
+				"FEATURE_ULURU",
+				"FEATURE_SRI_PADA",
+				"FEATURE_LYSEFJORDEN",
+				"FEATURE_WULINGYUAN",
+				"FEATURE_CLIFFS_DOVER",
+				"FEATURE_GALAPAGOS",
+				"FEATURE_KILIMANJARO",
+				"FEATURE_OLD_FAITHFUL",
+				"FEATURE_EVEREST",
+				"FEATURE_SALAR_DE_UYUNI",
+				"FEATURE_PIOPIOTAHI",
+				"FEATURE_KRAKATOA",
+				"FEATURE_PAITITI",
+				"FEATURE_CHOCOLATEHILLS",
+				"FEATURE_NAMIB",
+				"FEATURE_KAILASH",
+				"FEATURE_LAKE_VICTORIA",
+				"FEATURE_TSINGY",
+				"FEATURE_DELICATE_ARCH",
+				"FEATURE_BIOLUMINESCENT_BAY",
+				"FEATURE_YOSEMITE",
+				"FEATURE_LENCOIS_MARANHENSES",
+				"FEATURE_DEVILSTOWER"
+				}
+	GameConfiguration.SetValue("EXCLUDE_NATURAL_WONDERS",default)
+end	
+
+function TwoVITwo_CS()
+	local default = {}
+	default ={
+				"CIVILIZATION_KABUL", 
+				"CIVILIZATION_JOHANNESBURG",
+				"CIVILIZATION_CHINGUETTI",
+				"CIVILIZATION_ANTANANARIVO",
+				"CIVILIZATION_ZANZIBAR",
+				"CIVILIZATION_BOLOGNA",
+				"CIVILIZATION_AUCKLAND",
+				"CIVILIZATION_BABYLON",
+				"CIVILIZATION_AYUTTHAYA",
+				"CIVILIZATION_NGAZARGAMU",
+				"CIVILIZATION_NAN_MADOL"		
+				}
+	GameConfiguration.SetValue("EXCLUDE_CITY_STATES",default)
+end		
+
 function CheckPreset()
 	local currentPreset = GameConfiguration.GetValue("MPH_PRESET")
 	print("CheckPreset()",currentPreset,m_Preset,isInSession)
@@ -966,7 +1035,14 @@ function CheckPreset()
 		if currentPreset == 4 then
 			print("Applied Premier Settings")
 			Premier_League_Natural_Wonders()
-		end	
+		end
+		-- 2vi2 preset
+		if currentPreset == 6 then
+			print("Applied 2vi2 Settings")
+			TwoVITwo_Natural_Wonders()
+			TwoVITwo_CS()
+			GameConfiguration.SetValue("CITY_STATE_COUNT",4)
+		end 
 		Network.BroadcastGameConfig();	
 		OnUpdateUI()
 	end

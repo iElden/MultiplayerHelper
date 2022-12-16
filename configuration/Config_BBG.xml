@@ -9,6 +9,11 @@
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="3" TargetGroup="Game" TargetId="BARBS_SETTING" TargetValue="-1" Hash="0" />
 		<!-- CPL Premier League -->
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="4" TargetGroup="Game" TargetId="BARBS_SETTING" TargetValue="-1" Hash="0" />
+		<!-- 2vi2 -->
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Game" TargetId="BARBS_SETTING" TargetValue="-1" Hash="0" />
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Game" TargetId="BBCC_SETTING" TargetValue="0" Hash="0" />
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Game" TargetId="BBCC_SETTING_YIELD" TargetValue="1" Hash="0" />
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Game" TargetId="VICTORY_RELIGIOUS" TargetValue="0" Hash="0" />	
 		<!-- OCC -->
 		<Row SourceGroup="Game" SourceId="GAMEMODE_ONECITY" SourceValue="1" TargetGroup="Game" TargetId="BARBS_SETTING" TargetValue="-1" Static="1"/>
 	

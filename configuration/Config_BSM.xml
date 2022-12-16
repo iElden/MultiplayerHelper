@@ -8,5 +8,7 @@
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="4" TargetGroup="Game" TargetId="BSM_TOURNAMENT" TargetValue="CPL Premier League" Hash="0" />
 		<!--  Phyphy 1v1 Default Name  -->
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="5" TargetGroup="Game" TargetId="BSM_TOURNAMENT" TargetValue="1v1 Blitz Cup" Hash="0" />
+		<!-- 2vi2 Default Name -->
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Game" TargetId="BSM_TOURNAMENT" TargetValue="2vi2 League" Hash="0" />
 	</ConfigurationUpdates>
 </GameInfo>

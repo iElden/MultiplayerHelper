@@ -98,6 +98,7 @@ function SmartTimer()
 	-- 4: Sephis
 	-- 5: Casual
 	-- 6: Phyphy
+	-- 7: 2vi2 (Flashy)
 	if GameConfiguration.GetValue("CPL_SMARTTIMER") == 1 then
 		return
 	end
@@ -246,6 +247,22 @@ function SmartTimer()
 
 	end
 	
+	if GameConfiguration.GetValue("CPL_SMARTTIMER") == 7 then
+
+	if currentTurn<10 then
+		timer = 15
+	end
+
+	if currentTurn>=10 and currentTurn<=25 then
+		time = 30
+	end
+
+	if currentTurn>25 then
+		time = 30+2*(currentTurn-25)
+	end
+	
+	end
+
 	local turnSegment = Game.GetCurrentTurnSegment();
 	if GameConfiguration.GetValue("CPL_SMARTTIMER") ~= 1 then
 		if turnSegment == WORLD_CONGRESS_STAGE_1 then

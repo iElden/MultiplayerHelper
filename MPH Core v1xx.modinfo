@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Mod id="619ac86e-d99d-4bf3-b8f0-8c5b8c402176" version="146">
+<Mod id="619ac86e-d99d-4bf3-b8f0-8c5b8c402176" version="147">
 
   <Properties>
     <Name>LOC_MPH_TITLE</Name>
     <Description>LOC_MPH_DESCRIPTION</Description>
 	<Created>1</Created>
-	<Version>146</Version>
+	<Version>147</Version>
     <Teaser>LOC_MPH_TEASER</Teaser>
     <Authors>D. / Jack The Narrator</Authors>
 	<SpecialThanks>Civfanatics.com, CPL, Gedemon, the [NnJa] crew, coloo, iElden</SpecialThanks>
@@ -14,8 +14,8 @@
   
 	<LocalizedText>
 		<Text id="LOC_MPH_TITLE">
-			<en_US>Multiplayer Helper 1.4.6</en_US>
-			<fr_FR>Multiplayer Helper 1.4.6</fr_FR>
+			<en_US>Multiplayer Helper 1.4.7</en_US>
+			<fr_FR>Multiplayer Helper 1.4.7</fr_FR>
 		</Text>
 		<Text id="LOC_MPH_TEASER">
 			<en_US>Esport oriented mod to help tournament and game statibility.</en_US>
@@ -127,6 +127,7 @@
     </ImportFiles>
 
         <UpdateDatabase id="CPL_SETTINGS">
+        	<File>configuration/config.sql</File>
             <File>configuration/Config.xml</File>
 			<File>configuration/Config_BBG.xml</File>
 			<File>configuration/Config_BBS.xml</File>
@@ -491,7 +492,6 @@
 	<File>ui/setupparameters.lua</File>
 	<File>ui/stagingroom.lua</File>
 	<File>ui/stagingroom.xml</File>
-
 	<!-- InGame UI -->
 	<File>ui/ingame.xml</File>
 	<File>ui/ingame.lua</File>
@@ -525,6 +525,7 @@
 		<File>ui/Additions/SuddenDeathPanel.xml</File>
 		<File>ui/Replacements/unitflagmanager.lua</File>
 	
+	<File>configuration/config.sql</File>
 	<File>configuration/Config.xml</File>
 	<File>configuration/Config_BBG.xml</File>
 	<File>configuration/Config_BBS.xml</File>
