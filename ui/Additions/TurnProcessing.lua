@@ -254,11 +254,11 @@ function SmartTimer()
 	end
 
 	if currentTurn>=10 and currentTurn<=25 then
-		time = 30
+		timer = 30
 	end
 
 	if currentTurn>25 then
-		time = 30+2*(currentTurn-25)
+		timer = 30+2*(currentTurn-25)
 	end
 	
 	end
