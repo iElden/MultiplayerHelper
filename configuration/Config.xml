@@ -390,7 +390,7 @@
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="5" TargetGroup="Game" TargetId="CPL_SMARTTIMER" TargetValue="6" Hash="0"/>
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="5" TargetGroup="Game" TargetId="CPL_BAN_FORMAT" TargetValue="0" Hash="0"/>
 		<!-- Falcon 2vs2 -->
-		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Game" TargetId="MPH_OFFICIAL_GAME" TargetValue="1" />
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Game" TargetId="MPH_OFFICIAL_GAME" TargetValue="1"/>
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Game" TargetId="PRIVATE_GAME" TargetValue="1" />
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Game" TargetId="NO_DUPLICATE_LEADERS" TargetValue="1" Hash="0" />
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Game" TargetId="NO_DUPLICATE_CIVILIZATIONS" TargetValue="1" Hash="0" />
