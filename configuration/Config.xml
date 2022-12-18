@@ -395,7 +395,7 @@
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Game" TargetId="NO_DUPLICATE_LEADERS" TargetValue="1" Hash="0" />
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Game" TargetId="NO_DUPLICATE_CIVILIZATIONS" TargetValue="1" Hash="0" />
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Game" TargetId="GAME_START_ERA" TargetValue="ERA_ANCIENT" Hash="1"/>
-		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Game" TargetId="CPL_SMARTTIMER" TargetValue="5"/>
+		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Game" TargetId="CPL_SMARTTIMER" TargetValue="0"/>
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Game" TargetId="CPL_BAN_FORMAT" TargetValue="0"/>
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Map" TargetId="MAP_SIZE" TargetValue="MAPSIZE_TINY" Hash="1"/>
 		<Row SourceGroup="Game" SourceId="MPH_PRESET" SourceValue="6" TargetGroup="Map" TargetId="world_age" TargetValue="1"/>
